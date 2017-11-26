@@ -62,7 +62,14 @@ public class RemovingStuffFromArrayLists {
 		truth.add('#');
 		truth.add('u');
 		truth.add('t');
-
+		String syso = "";
+		for(int i = 0; i < truth.size();i++) {
+			if(truth.get(i).equals('#')) {
+				truth.remove(i);
+			}
+			
+		}
+		System.out.println(truth);
 		/* TODO 2: Remove the hash symbols and print out the truth. */
 
 	}
