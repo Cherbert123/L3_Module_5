@@ -1,6 +1,8 @@
 package data_structures;
 
 
+import java.lang.reflect.Array;
+
 /** Copyright The League of Amazing Programmers 2013-2017
  *    Level 3
  *    A Murder of Crows
@@ -28,7 +30,19 @@ public class MurderOfCrows {
          * 1. One of the Crows has eaten the diamond. You need to search through the stomach of each Crow, 
          * then print the name of the guilty Crow.
          */
-        
+    		int dead = 0;
+    		int tdead = 0;
+    		for (int i = 0; i < theMurder.size(); i++) {
+    		ArrayList<String> contents = theMurder.get(i).getStomachContents();
+    		if(contents.size() == 11) {
+    			tdead = dead;
+    			System.out.println(theMurder.get(i).getName() + ", Casualities: " + tdead);
+    			
+    		} else {
+    			dead = dead + 1;
+    		}
+		}
+       
         /* 2. How many innocent crows had to die before the diamond was found? */
         
     }
